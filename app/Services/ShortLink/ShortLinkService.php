@@ -37,7 +37,7 @@ class ShortLinkService implements ShortLinkServiceInterface
             ->with('error', 'This link not valid');
         }
             // Checks if a link is out of date
-        if($find->date_del > $timer){
+        if($find->date_del > $timer OR  $find->stats > 15){
             return $this->deleteLink($timer);
         }
             // adds a counter
