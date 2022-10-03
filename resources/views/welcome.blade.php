@@ -51,7 +51,7 @@
                 </thead>
                 
                 <tbody>
-                    @foreach($shortLinks as $row)
+                    @foreach($shortLinks ?? '' as $row)
                     <tr>
                         <td>{{ $row->id }}</td>
                         <td><a href="{{ route('shorten.link', $row->code) }}"
