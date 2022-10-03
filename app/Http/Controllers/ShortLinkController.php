@@ -73,9 +73,6 @@ class ShortLinkController extends Controller
      */
     public function shortenLink($code)
     {
-
-        $checkLink = $this->shortkService->showLinkAndAddStats($code, $this->timer);
-
-        return $checkLink;
+        return $this->shortkService->showLinkAndAddStats($code, $this->timer);
     }
 }
